@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+    content="My name is Mohand Gamal, a Frontend Web Developer, Entrepreneur, and Designer from Egypt. I always strive for perfection in every project, pouring my tireless energy into creating websites that surpass expectations. As a professional, I pay attention to your individual needs and aspirations. What sets me apart isn't just my expertise but also the genuine passion I have for my work, adding that extra touch to make my projects stand out">
+
+  <meta name="keywords"
+    content="MOHANDILO, Web Developer, Frontend Developer, JavaScript Expert, CSS Specialist, UI/UX Enthusiast, Coding Blogger, Tech Speaker, Creative Coder, Open Source Contributor, Career Coach, Web Projects Portfolio, Experienced Developer, Many Clients, Web Development, Programming, Frontend Development, Coding, Software Development, Web Design, HTML5, CSS3, JavaScript, User Interface, User Experience, Responsive Web Design, Mobile Development, Cross-browser Compatibility, Web Technologies, Client-Side Development">
+
+  <meta name="author" content="MOHANDILO">
+
+  <link rel="icon" type="image/png" href="/src/MG.webp">
+
+  <meta property="og:title" content="MOHANDILO">
+
+  <meta property="og:description"
+    content="My name is Mohand Gamal, a Frontend Web Developer, Entrepreneur, and Designer from Egypt. I always strive for perfection in every project, pouring my tireless energy into creating websites that surpass expectations. As a professional, I pay attention to your individual needs and aspirations. What sets me apart isn't just my expertise but also the genuine passion I have for my work, adding that extra touch to make my projects stand out">
+
+  <meta property="og:image" content="/src/MG.webp">
+
+  <meta property="og:url" content="https://www.mohandova.com">
+
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="twitter:title" content="MOHANDILO">
+
+  <meta name="twitter:description"
+    content="My name is Mohand Gamal, a Frontend Web Developer, Entrepreneur, and Designer from Egypt. I always strive for perfection in every project, pouring my tireless energy into creating websites that surpass expectations. As a professional, I pay attention to your individual needs and aspirations. What sets me apart isn't just my expertise but also the genuine passion I have for my work, adding that extra touch to make my projects stand out">
+
+  <meta name="twitter:image" content="/src/MG.webp">
+  <title>MOHANDILO - Worldwide Frontend Web Developer</title>
+
+
+  <link href="/dist/output.css" rel="stylesheet">
+
+
+  <style>
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+
+    .scrollbar-hide {
+      scrollbar-width: none;
+    }
+  </style>
+
+  <style>
+    html {
+      scroll-behavior: smooth
+    }
+  </style>
+
+
+  <style>
+    svg {
+      overflow: visible;
+      width: 100px;
+      height: 150px;
+    }
+
+    svg g {
+      animation: slide 2s linear infinite;
+    }
+
+    svg g:nth-child(2) {
+      animation-delay: 0.5s;
+    }
+
+    svg g:nth-child(2) path {
+      animation-delay: 0.5s;
+      stroke-dasharray: 0px 158px;
+      stroke-dashoffset: 1px;
+    }
+
+    svg path {
+      stroke: url(#gradient);
+      stroke-width: 20px;
+      stroke-linecap: round;
+      fill: none;
+      stroke-dasharray: 0 157px;
+      stroke-dashoffset: 0;
+      animation: escalade 2s cubic-bezier(0.8, 0, 0.2, 1) infinite;
+    }
+
+    @keyframes slide {
+      0% {
+        transform: translateY(-50px);
+      }
+
+      100% {
+        transform: translateY(50px);
+      }
+    }
+
+    @keyframes escalade {
+      0% {
+        stroke-dasharray: 0 157px;
+        stroke-dashoffset: 0;
+      }
+
+      50% {
+        stroke-dasharray: 157px 157px;
+        stroke-dashoffset: 0;
+      }
+
+      100% {
+        stroke-dasharray: 157px 157px;
+        stroke-dashoffset: -156px;
+      }
+    }
+  </style>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      var pageLoaded = false;
+      var mediaLoaded = false;
+      var videosAutoplayed = false;
+
+      function checkPageLoaded() {
+        if (pageLoaded && mediaLoaded) {
+          setTimeout(function () {
+            $(".loader-wrapper").fadeOut("slow");
+          });
+        }
+      }
+
+      $(window).on("load", function () {
+        pageLoaded = true;
+        checkPageLoaded();
+      });
+
+      $("audio, video").on("canplaythrough", function () {
+        mediaLoaded = true;
+        checkPageLoaded();
+      });
+
+      $("video").on("play", function () {
+        videosAutoplayed = true;
+        checkPageLoaded();
+      });
+
+      // Check if the video metadata has loaded (autoplay restriction check)
+      $("video").on("loadedmetadata", function () {
+        mediaLoaded = true;
+        checkPageLoaded();
+      });
+
+      if (pageLoaded) {
+        checkPageLoaded();
+      }
+    });
+
+  </script>
+
+  <style>
+    .loader-wrapper {
+      z-index: 1000000;
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(-45deg, #D2E0E9, #C7D9E5, #8CB2CD);
+      height: 100vh
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
+
+
+  <style>
+    svg {
+      overflow: visible;
+      width: 100px;
+      height: 150px;
+    }
+
+    svg g {
+      animation: slide 2s linear infinite;
+    }
+
+    svg g:nth-child(2) {
+      animation-delay: 0.5s;
+    }
+
+    svg g:nth-child(2) path {
+      animation-delay: 0.5s;
+      stroke-dasharray: 0px 158px;
+      stroke-dashoffset: 1px;
+    }
+
+    svg path {
+      stroke: url(#gradient);
+      stroke-width: 20px;
+      stroke-linecap: round;
+      fill: none;
+      stroke-dasharray: 0 157px;
+      stroke-dashoffset: 0;
+      animation: escalade 2s cubic-bezier(0.8, 0, 0.2, 1) infinite;
+    }
+
+    @keyframes slide {
+      0% {
+        transform: translateY(-50px);
+      }
+
+      100% {
+        transform: translateY(50px);
+      }
+    }
+
+    @keyframes escalade {
+      0% {
+        stroke-dasharray: 0 157px;
+        stroke-dashoffset: 0;
+      }
+
+      50% {
+        stroke-dasharray: 157px 157px;
+        stroke-dashoffset: 0;
+      }
+
+      100% {
+        stroke-dasharray: 157px 157px;
+        stroke-dashoffset: -156px;
+      }
+    }
+  </style>
+
+
+  <style>
+    .loader-wrapper {
+      z-index: 10000000;
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(-45deg, #D2E0E9, #C7D9E5, #8CB2CD);
+      height: 100vh
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
+
+  <style>
+    .zbytt {
+      font-variant: small-caps;
+      font-family: sans-serif;
+      font-weight: 600
+    }
+
+    .zbyttt {
+      font-variant: small-caps;
+      font-family: sans-serif;
+      font-weight: 600;
+      color: #000000;
+      background-color: #ffffff;
+    }
+  </style>
+
+  <style>
+    .zbyt {
+      z-index: 100;
+      position: absolute;
+    }
+  </style>
+
+  <style>
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      z-index: 10000;
+      background-color: #000000e3;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 20vh;
+      text-align: center;
+    }
+
+    .sidenav a {
+      display: block;
+      transition: 0.5s;
+      animation: backwards;
+
+    }
+
+    .sidenav a:hover {
+      color: #000000;
+      background-color: #ffffff;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      color: #ffff;
+      right: 25px;
+      font-size: 60px;
+      margin-left: 50px;
+    }
+  </style>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "100%";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
+
+
+
+  <style>
+    .zbyt {
+      z-index: 100;
+      position: absolute;
+    }
+  </style>
+
+
+
+  <style>
+    #video-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    video {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+
+    }
+
+    .h-screen {
+      height: 100vh;
+    }
+  </style>
+
+  <style>
+    .elementzb {
+      margin-top: 0px;
+      margin-right: 0px;
+      margin-bottom: 0px;
+      margin-left: 0px;
+    }
+  </style>
+
+
+  <style>
+    .unselectable {
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -o-user-select: none;
+      user-select: none;
+
+    }
+  </style>
+
+
+  <style>
+    .zbyty {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  </style>
+
+</head>
+
+<div class="loader-wrapper">
+  <svg>
+    <g>
+      <path d="M 50,100 A 1,1 0 0 1 50,0" />
+    </g>
+    <g>
+      <path d="M 50,75 A 1,1 0 0 0 50,-25" />
+    </g>
+    <defs>
+      <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" style="stop-color:#FF56A1;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#FF9350;stop-opacity:1" />
+      </linearGradient>
+    </defs>
+  </svg>
+</div>
+
+
+<body class="gradient-bg bg-black scrollbar-hide">
+
+
+
+  <div class="relative z-[10000]">
+    <div class="absolute top-0 bg-black bg-opacity-50 md:h-16 h-16 w-screen"></div>
+
+    <div class="relative z-[10000] w-screen">
+      <div class="absolute  flex inset-0 mt-5 md:mt-4 text-center justify-center">
+        <a href="#"
+          class=" text-white text-center bg-black px-0 bg-opacity-60 text-2xl md:text-4xl font-extrabold  mr-0 font-serif ">MOHANDILO</a>
+      </div>
+    </div>
+    <div class="w-screen relative">
+      <span class="zbyt absolute right-4 top-2.5 text-right z[10000] text-white" style="font-size:30px;cursor:pointer"
+        onclick="openNav()">☰</span>
+    </div>
+  </div>
+
+  <div id="mySidenav" class="sidenav" style="width: 0px;">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a class="text-white zbyttt text-4xl md:text-7xl py-4" onclick="closeNav()" href="#whymex">Why me</a>
+    <a class="text-white zbytt  text-4xl md:text-7xl py-4" onclick="closeNav()" href="#reviewsx">Reviews</a>
+    <a class="text-white zbytt  text-4xl md:text-7xl py-4" onclick="bazby" id="skillsx" href="#skillsx">Skills</a>
+    <a class="text-white zbytt  text-4xl md:text-7xl py-4" onclick="closeNav()" href="#productsx">Products</a>
+    <a class="text-white zbyttt text-4xl md:text-7xl py-4" onclick="closeNav()" href="sum.html">Contact</a>
+  </div>
+
+
+
+  <div id="mySidenavs" class="sidenavs">
+    <div>
+      <a href="javascript:void(0)" class="closebtns" onclick="closeNavs()">×</a>
+      <p class="text-6xl font-bold text-white zbytt"> Skills</p>
+    </div>
+
+
+
+    <div class="flex flex-col space-y-2 mt-4">
+      <span class="text-base font-medium text-blue-700 dark:text-white">HTML</span>
+    </div>
+
+    <div class="flex w-screen justify-center">
+      <div class=" w-52 flex justify-center bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+        <div class=" bg-white h-2.5 rounded-full" style="width: 100%"></div>
+      </div>
+    </div>
+
+
+
+    <div class="flex flex-col space-y-2 mt-4">
+      <span class="text-base font-medium text-blue-700 dark:text-white">CSS</span>
+    </div>
+
+    <div class="flex w-screen justify-center">
+      <div class=" w-52 flex justify-center bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+        <div class=" bg-white h-2.5 rounded-full" style="width: 100%"></div>
+      </div>
+    </div>
+
+    <div class="flex flex-col space-y-2 mt-4">
+      <span class="text-base font-medium text-blue-700 dark:text-white">TailwindCSS</span>
+    </div>
+
+    <div class="flex w-screen justify-center">
+      <div class=" w-52 flex justify-center bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+        <div class=" bg-white h-2.5 rounded-full" style="width: 100%"></div>
+      </div>
+    </div>
+
+
+
+    <div class="flex flex-col space-y-2 mt-4">
+      <span class="text-base font-medium text-blue-700 dark:text-white">Vanta.js</span>
+    </div>
+
+    <div class="flex w-screen justify-center">
+      <div class=" w-52 flex justify-center bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+        <div class=" bg-white h-2.5 rounded-full" style="width: 100%"></div>
+      </div>
+    </div>
+
+    <div class="flex flex-col space-y-2 mt-4">
+      <span class="text-base font-medium text-blue-700 dark:text-white">PicoCSS</span>
+    </div>
+
+    <div class="flex w-screen justify-center">
+      <div class=" w-52 flex justify-center bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+        <div class=" bg-white h-2.5 rounded-full" style="width: 100%"></div>
+      </div>
+    </div>
+
+
+    <div class="flex flex-col space-y-2 mt-4">
+      <span class="text-base font-medium text-blue-700 dark:text-white">Custom Shopify Pages</span>
+    </div>
+
+    <div class="flex w-screen justify-center">
+      <div class=" w-52 flex justify-center bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+        <div class=" bg-white h-2.5 rounded-full" style="width: 100%"></div>
+      </div>
+    </div>
+
+    <div class="flex flex-col space-y-2 mt-4">
+      <span class="text-base font-medium text-blue-700 dark:text-white">Web Design</span>
+    </div>
+
+    <div class="flex w-screen justify-center">
+      <div class=" w-52 flex justify-center bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+        <div class=" bg-white h-2.5 rounded-full" style="width: 100%"></div>
+      </div>
+    </div>
+
+    <div class="flex flex-col space-y-2 mt-4">
+      <span class="text-base font-medium text-blue-700 dark:text-white">Chart.js</span>
+    </div>
+
+    <div class="flex w-screen justify-center">
+      <div class=" w-52 flex justify-center bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+        <div class=" bg-white h-2.5 rounded-full" style="width: 80%"></div>
+      </div>
+    </div>
+
+    <div class="flex flex-col space-y-2 mt-4">
+      <span class="text-base font-medium text-blue-700 dark:text-white">jQuery</span>
+    </div>
+
+    <div class="flex w-screen justify-center">
+      <div class=" w-52 flex justify-center bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+        <div class=" bg-white h-2.5 rounded-full" style="width: 70%"></div>
+      </div>
+    </div>
+
+
+
+    <div class="flex flex-col space-y-2 mt-4">
+      <span class="text-base font-medium text-blue-700 dark:text-white">Javascript</span>
+    </div>
+
+    <div class="flex w-screen justify-center">
+      <div class=" w-52 flex justify-center bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+        <div class=" bg-white h-2.5 rounded-full" style="width: 60%"></div>
+      </div>
+    </div>
+
+
+    <div class="flex flex-col space-y-2 mt-4">
+      <span class="text-base font-medium text-blue-700 dark:text-white">Three.JS</span>
+    </div>
+
+    <div class="flex w-screen justify-center">
+      <div class=" w-52 flex justify-center bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+        <div class=" bg-white h-2.5 rounded-full" style="width: 20%"></div>
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+
+  <div class="video-container" style="position: relative; width: 100%; height: 100vh; overflow: hidden;">
+    <video aria-hidden="true" muted="" autoplay="" loop="" playsinline="" poster="/src/pc.webp"
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+      <source src="src/intro.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div
+      class="animate-pulse absolute bottom-6 h-6 w-12 md:w-14 md:h-10 md:bottom-2 right-1/2 -translate-y-1/2  translate-x-1/2  text-4xl transform">
+      <img src="/src/arrow.webp">
+    </div>
+
+    <div class="translate-y-1/2 -mt-16 h-screen  transform text-center w-screen absolute ">
+      <p class=" text-white unselectable p-4 text-2xl md:text-4xl font-extrabold font-serif bg-black bg-opacity-70 ">
+        Step into a
+        dimension of unmatched elegance</p>
+    </div>
+
+  </div>
+
+
+
+  <div
+    class="bg-[#1D1D22]  bg-cover bg-no-repeat bg-fixed pt-0 mt-0 mb-0 justify-center pb-8 md:pt-2 md:pb-6  mr-20 my-4 md:my-0 lg:  w-full items-center"
+    style="background-image: url('/src/pc.webp');padding-bottom: 0px; background-repeat: no-repeat;">
+
+    <div id="reviewsx" class=" bg-[#1D1D22] p-8 h-full bg-opacity-70 w-full bg-cover ">
+      <p class="text-4xl  flex justify-center font-bold text-white unselectable ">Reviews</p>
+    </div>
+
+    <div class="justify-center flex">
+      <div class="sm:grid sm:grid-cols-2 lg:grid-cols-3">
+
+
+        <div
+          class=" py-8 my-8 px-6 sm:flex sm:flex-col max-w-sm mx-8 bg-[#1D1D22] rounded-xl shadow-lg space-y-2 sm:py-4 sm:items-center sm:space-y-0 sm:space-x-6 bg-opacity-70 border-opacity-80 border-[#1D1D22] border-4">
+          <img class="block mx-auto h-24 rounded-full sm:mx-0 sm:shrink-0" src="/src/sprites.webp">
+          <div class="text-center space-y-2 sm:text-center" style="margin-left: 0px;">
+            <div class="space-y-0.5">
+              <p class="text-lg text-white font-semibold mt-2">
+                Sprites
+              </p>
+              <p class="text-white text-sm">
+                Enterpuner
+              </p>
+            </div>
+          </div>
+          <div class="w-full text-center mt-0 whitespace-pre-line text-white font-semibold text-sm"
+            style="margin-left: 0px;">
+            I trust in your abilities completely because of your dedication, to accommodating any changes I might need
+            before even asking! This level of professionalism greatly boosts my delight of the service, with the service
+            you offer.
+          </div>
+        </div>
+
+
+        <div
+          class=" py-8 my-8 px-6 sm:flex sm:flex-col max-w-sm mx-8 bg-[#1D1D22] rounded-xl shadow-lg space-y-2 sm:py-4 sm:items-center sm:space-y-0 sm:space-x-6 bg-opacity-70 border-opacity-80 border-[#1D1D22] border-4">
+          <img class="block mx-auto h-24 rounded-full sm:mx-0 sm:shrink-0" src="/src/leona.webp">
+          <div class="text-center space-y-2 sm:text-center" style="margin-left: 0px;">
+            <div class="space-y-0.5">
+              <p class="text-lg text-white font-semibold mt-2">
+                Leona
+              </p>
+              <p class="text-white text-sm">
+                Product Manager
+              </p>
+            </div>
+          </div>
+          <div class="w-full text-center mt-0 whitespace-pre-line text-white font-semibold text-sm"
+            style="margin-left: 0px;">
+            I cannot express how impressed I am, with your skills. Your work goes beyond being fantastic; it is truly
+            extraordinary. What sets you apart however is your commitment to adapting to any changes or requests I may
+            have. your abilities greatly enhances my satisfaction with the service you provide.
+
+          </div>
+        </div>
+
+
+        <div
+          class=" py-8 my-8 px-6 sm:flex sm:flex-col max-w-sm mx-8 bg-[#1D1D22] rounded-xl shadow-lg space-y-2 sm:py-4 sm:items-center sm:space-y-0 sm:space-x-6 bg-opacity-70 border-opacity-80 border-[#1D1D22] border-4">
+          <img class="block mx-auto h-24 rounded-full sm:mx-0 sm:shrink-0" src="/src/sol.webp">
+          <div class="text-center space-y-2 sm:text-center" style="margin-left: 0px;">
+            <div class="space-y-0.5">
+              <p class="text-lg text-white font-semibold mt-2">
+                Sol Developer
+              </p>
+              <p class="text-white text-sm">
+                Senior Backend Developer
+              </p>
+            </div>
+          </div>
+          <div class="w-full text-center mt-0 whitespace-pre-line text-white font-semibold text-sm"
+            style="margin-left: 0px;">
+            Mohand seems to be a fantastic Frontend Developer. He come across as organized, friendly and all that good
+            stuff.. On top of that they're fast and reliable! Having someone, like that, on my team would be a dream.
+            Thank you, Mohand. Keep spreading positivity and making a difference.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="whymex"
+    class="bg-[#1D1D22]  bg-cover bg-no-repeat bg-fixed mt-0 mb-0 justify-center pb-8 pt-3.5 md:py-10  mr-20 my-4 md:my-0 lg:  w-full items-center"
+    style="background-image: url('/src/pc.webp'); background-repeat: no-repeat;">
+
+    <div class="timeline-container" id="timeline-1">
+      <div class="timeline-header">
+        <h2 class="timeline-header__title">Mohand Gamal</h2>
+        <h3 class="timeline-header__subtitle text-black">Starving for perfectionism</h3>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item" data-text="Starving for perfectionism">
+          <div class="timeline__content"><img class=" " src="/src/EG.webp" />
+            <h2 class="timeline__content-title">Egypt</h2>
+            <p class="timeline__content-desc">
+              My name is Mohand Gamal. I'm a Frontend Web Developer, Entrepreneur and Designer hailing from captivating
+              Egypt. I always strive for perfection in every project I undertake. With my ambition and tireless energy I
+              pour myself into creating websites that not surpass your expectations but also leave you truly delighted.
+              As a professional I pay attention to your individual needs and aspirations. What makes me stand out isn't
+              my expertise but also the genuine passion I have, for my work. That extra touch that sets my projects
+              apart.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item" data-text="Inspiration">
+          <div class="timeline__content"><img class="" src="/src/alex.webp" />
+            <h2 class="timeline__content-title">Alexandria</h2>
+            <p class="timeline__content-desc">
+              Since I was young I've been fascinated by technology. Its fueled by a curiosity to comprehend the workings
+              reasons, behind their functionality and what makes them tick. It's as if I've forever been that child who
+              couldn't resist disassembling things just to explore what lies within.
+
+              I discovered my inspiration. Forged my path relying solely on myself. I've always been the one to stay
+              afloat and relish the feeling of independence avoiding dependence, on others. That's simply who I am.
+
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item" data-text="Journey">
+          <div class="timeline__content"><img class="" src="/src/losemus.webp" />
+            <h2 class="timeline__content-title">The beginning</h2>
+            <p class="timeline__content-desc">
+              I set out on a journey to explore and improve myself with a desire to uncover the complexities of the tech
+              world independently. My goal was to discover my passion something that would truly captivate me. It was,
+              during this pursuit that I came across frontend web development and it felt like fate had intervened.
+              Before diving into it I knew down that it was the perfect fit for me and I couldn't have been more right.
+
+              Frontend web development is a passion of mine. I wholeheartedly embrace it. My commitment to excellence
+              brings a quality to my projects that sets them apart, from others.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item" data-text="Mohand Gamal">
+          <div class="timeline__content">
+            <h2 class="timeline__content-title">IF NO LONGER PERFECT</h2>
+            <p class="timeline__content-desc">It's No Longer Mohand</p>
+          </div>
+        </div>
+        <div class="timeline-item" data-text="Upcoming">
+          <div class="timeline__content"><img src="/src/movas.webp" />
+            <h2 class="timeline__content-title">SOON</h2>
+            <p class="timeline__content-desc"></p>
+          </div>
+        </div>
+        <div class="timeline-item" data-text="Upcoming">
+          <div class="timeline__content"><img class="" src="src/movac.webp" />
+            <h2 class="timeline__content-title">SOON</h2>
+            <p class="timeline__content-desc"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <footer class="mt-0 text-center md:text-left bg-[#1D1D22] text-white">
+    <div class="w-full bg-[#1D1D22]  py-4 text-center flex flex-col">
+      <div class=" mx-auto ">
+
+        <p
+          class=" w-screen justify-center flex bg-[#1D1D22] zbyty  pt-0 text-white mt-0 text-lg pb-4 md:text-xl md:pb-0  font-bold  ">
+          Trusted by many businesses
+        </p>
+
+        <div class="flex md:pt-4 justify-center pb-0 md:pb-2 bg-[#1D1D22] space-x-5 md:space-x-12 mx-auto">
+          <div class="flex justify-center pb-4 mx-auto md:hidden lg:hidden xl:hidden overflow-x-auto">
+            <div class="flex space-x-5">
+              <img src="/src/movaf.webp" width="20" class="rounded-full md:rounded-full md:w-16 w-16">
+              <img src="/src/boostme.webp" width="20" class="rounded-full md:rounded-full md:w-16 w-16">
+              <img src="/src/movas.webp" width="20" class="rounded-full md:rounded-full md:w-16 w-16">
+              <img src="/src/tw.webp" width="20" class="rounded-full md:rounded-full md:w-16 w-16">
+              <img src="/src/mova2.webp" width="20" class="rounded-full md:rounded-full md:w-16 w-16">
+              <img src="/src/codeferno.webp" width="20" class="rounded-full md:rounded-full md:w-16 w-16">
+              <img src="/src/movac.webp" width="20" class="rounded-full md:rounded-full md:w-16 w-16">
+            </div>
+          </div>
+        </div>
+
+        <div class="hidden md:block md:flex md:justify-center md:space-x-12">
+          <img src="/src/movaf.webp" width="20" class="rounded-full md:rounded-full md:w-16 w-16">
+          <img src="/src/boostme.webp" width="20" class="rounded-full md:rounded-full md:w-16 w-16">
+          <img src="/src/movas.webp" width="20" class="rounded-full md:rounded-full md:w-16 w-16">
+          <img src="/src/tw.webp" width="20" class="rounded-full md:rounded-full md:w-16 w-16">
+          <img src="/src/mova2.webp" width="20" class="rounded-full md:rounded-full md:w-16 w-16">
+          <img src="/src/codeferno.webp" width="20" class="rounded-full md:rounded-full md:w-16 w-16">
+          <img src="/src/movac.webp" width="20" class="rounded-full md:rounded-full md:w-16 w-16">
+        </div>
+
+      </div>
+    </div>
+
+    <div class="flex justify-center pt-0 mt-0 zbyty text-sm bg-[#1D1D22] ">Videos and photos attributions</div>
+
+    <div class=" zbyty text-sm mt-0 bg-[#1D1D22]  mb-0 pt-0  flex justify-center space-x-4">
+
+      <div>
+        <a href="https://www.freepik.com/" target="_blank">freepik.com</a>
+      </div>
+
+      <div>
+        <a href="https://pixabay.com/" target="_blank">pixabay.com</a>
+      </div>
+
+    </div>
+
+    <div class="flex justify-center zbyty text-sm pt-4 bg-[#1D1D22] ">©Mohandova</div>
+
+    <div class="flex justify-center zbyty text-sm pt-0 pb-4 bg-[#1D1D22] ">I'm not affiliated with any corporation
+    </div>
+
+    <script>
+      function bazby() {
+        closeNav();
+        openNavs();
+      }
+      document.getElementById("skillsx").onclick = bazby;
+    </script>
+
+    <style>
+      .sidenavs {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        z-index: 10000;
+        background-color: #000000e3;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 16vh;
+        padding-bottom: 8vh;
+        text-align: center;
+      }
+
+
+      .sidenavs .closebtns {
+        position: absolute;
+        top: 0;
+        color: #ffff;
+        right: 25px;
+        font-size: 60px;
+        margin-left: 50px;
+      }
+    </style>
+
+    <script>
+      function openNavs() {
+        document.getElementById("mySidenavs").style.width = "100%";
+      }
+
+      function closeNavs() {
+        document.getElementById("mySidenavs").style.width = "0";
+      }
+    </script>
+
+
+
+    <script>
+      (function ($) {
+        $.fn.timeline = function () {
+          var selectors = {
+            id: $(this),
+            item: $(this).find(".timeline-item"),
+            activeClass: "timeline-item--active",
+            img: ".timeline__img"
+          };
+          selectors.item.eq(0).addClass(selectors.activeClass);
+          selectors.id.css(
+            "background-image",
+            "url(" +
+            selectors.item
+              .first()
+              .find(selectors.img)
+              .attr("src") +
+            ")"
+          );
+          var itemLength = selectors.item.length;
+          $(window).scroll(function () {
+            var max, min;
+            var pos = $(this).scrollTop();
+            selectors.item.each(function (i) {
+              min = $(this).offset().top;
+              max = $(this).height() + $(this).offset().top;
+              var that = $(this);
+              if (i == itemLength - 2 && pos > min + $(this).height() / 2) {
+                selectors.item.removeClass(selectors.activeClass);
+                selectors.id.css(
+                  "background-image",
+                  "url(" +
+                  selectors.item
+                    .last()
+                    .find(selectors.img)
+                    .attr("src") +
+                  ")"
+                );
+                selectors.item.last().addClass(selectors.activeClass);
+              } else if (pos <= max - 40 && pos >= min) {
+                selectors.id.css(
+                  "background-image",
+                  "url(" +
+                  $(this)
+                    .find(selectors.img)
+                    .attr("src") +
+                  ")"
+                );
+                selectors.item.removeClass(selectors.activeClass);
+                $(this).addClass(selectors.activeClass);
+              }
+            });
+          });
+        };
+      })(jQuery);
+
+      $("#timeline-1").timeline();
+    </script>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Cardo|Pathway+Gothic+One');
+
+      .timeline {
+        display: flex;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        flex-direction: column;
+        max-width: 700px;
+        position: relative;
+      }
+
+      .timeline__content-title {
+        font-weight: normal;
+        font-size: 66px;
+        margin: -10px 0 0 0;
+        transition: 0.4s;
+        padding: 0 10px;
+        box-sizing: border-box;
+        font-family: 'Pathway Gothic One', sans-serif;
+        color: #fff;
+      }
+
+      .timeline__content-desc {
+        margin: 0;
+        font-size: 15px;
+        box-sizing: border-box;
+        color: rgba(255, 255, 255, .7);
+        font-family: Cardo;
+        font-weight: normal;
+        line-height: 25px;
+      }
+
+      .timeline:before {
+        position: absolute;
+        left: 50%;
+        width: 2px;
+        height: 100%;
+        margin-left: -1px;
+        content: "";
+        background: rgba(255, 255, 255, .07);
+      }
+
+      @media only screen and (max-width: 767px) {
+        .timeline:before {
+          left: 40px;
+        }
+      }
+
+      .timeline-item {
+        padding: 40px 0;
+        opacity: 0.3;
+        filter: blur(2px);
+        transition: 0.5s;
+        box-sizing: border-box;
+        width: calc(50% - 40px);
+        display: flex;
+        position: relative;
+        transform: translateY(-80px);
+      }
+
+      .timeline-item:before {
+        content: attr(data-text);
+        letter-spacing: 3px;
+        width: 100%;
+        position: absolute;
+        color: rgba(255, 255, 255, .5);
+        font-size: 13px;
+        font-family: 'Pathway Gothic One', sans-serif;
+        border-left: 2px solid rgba(255, 255, 255, .5);
+        top: 70%;
+        margin-top: -5px;
+        padding-left: 15px;
+        opacity: 0;
+        right: calc(-100% - 56px);
+      }
+
+      .timeline-item:nth-child(even) {
+        align-self: flex-end;
+      }
+
+      .timeline-item:nth-child(even):before {
+        right: auto;
+        text-align: right;
+        left: calc(-100% - 56px);
+        padding-left: 0;
+        border-left: none;
+        border-right: 2px solid rgba(255, 255, 255, .5);
+        padding-right: 15px;
+      }
+
+      .timeline-item--active {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0px);
+      }
+
+      .timeline-item--active:before {
+        top: 50%;
+        transition: 0.3s all 0.2s;
+        opacity: 1;
+      }
+
+      .timeline-item--active .timeline__content-title {
+        margin: -50px 0 20px 0;
+      }
+
+      @media only screen and (max-width: 767px) {
+        .timeline-item {
+          align-self: baseline !important;
+          width: 100%;
+          padding: 0 30px 150px 80px;
+        }
+
+        .timeline-item:before {
+          left: 10px !important;
+          padding: 0 !important;
+          top: 50px;
+          text-align: center !important;
+          width: 60px;
+          border: none !important;
+        }
+
+        .timeline-item:last-child {
+          padding-bottom: 40px;
+        }
+      }
+
+      .timeline__img {
+        max-width: 100%;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, .4);
+      }
+
+      .timeline-container {
+        width: 100%;
+        position: relative;
+        padding: 80px 0;
+        transition: 0.3s ease 0s;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+
+      .timeline-container:before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background-color: #00000059;
+        height: 100%;
+        content: "";
+      }
+
+      .timeline-header {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 80px;
+        position: relative;
+      }
+
+      .timeline-header__title {
+        color: #fff;
+        font-size: 46px;
+        font-family: Cardo;
+        font-weight: normal;
+        margin: 0;
+      }
+
+      .timeline-header__subtitle {
+        color: rgba(255, 255, 255, .5);
+        font-family: 'Pathway Gothic One', sans-serif;
+        font-size: 16px;
+        letter-spacing: 5px;
+        margin: 10px 0 0 0;
+        font-weight: normal;
+      }
+
+      .demo-footer {
+        padding: 60px 0;
+        text-align: center;
+      }
+
+      .demo-footer a {
+        color: #999;
+        display: inline-block;
+        font-family: Cardo;
+      }
+    </style>
+
+  </footer>
+
+</body>
+
+</html>

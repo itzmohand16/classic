@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.clouds.min.js"></script>
+    <link href="/dist/output.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+      <!--Website Info-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="My name is Mohand Gamal, a Frontend Web Developer, Entrepreneur, and Designer from Egypt. I always strive for perfection in every project, pouring my tireless energy into creating websites that surpass expectations. As a professional, I pay attention to your individual needs and aspirations. What sets me apart isn't just my expertise but also the genuine passion I have for my work, adding that extra touch to make my projects stand out">  
+  
+  <meta name="keywords" content="MOHANDILO, Web Developer, Frontend Developer, JavaScript Expert, CSS Specialist, UI/UX Enthusiast, Coding Blogger, Tech Speaker, Creative Coder, Open Source Contributor, Career Coach, Web Projects Portfolio, Experienced Developer, Many Clients, Web Development, Programming, Frontend Development, Coding, Software Development, Web Design, HTML5, CSS3, JavaScript, User Interface, User Experience, Responsive Web Design, Mobile Development, Cross-browser Compatibility, Web Technologies, Client-Side Development">
+
+  <meta name="author" content="MOHANDILO">
+
+  <link rel="icon" type="image/png" href="/src/M.webp">
+
+  <meta property="og:title" content="MOHANDILO">
+
+  <meta property="og:description" content="My name is Mohand Gamal, a Frontend Web Developer, Entrepreneur, and Designer from Egypt. I always strive for perfection in every project, pouring my tireless energy into creating websites that surpass expectations. As a professional, I pay attention to your individual needs and aspirations. What sets me apart isn't just my expertise but also the genuine passion I have for my work, adding that extra touch to make my projects stand out">
+  
+  <meta property="og:image" content="/src/M.webp"> <!-- Updated image source -->
+
+  <meta property="og:url" content="https://www.mohandova.com">
+
+  <meta name="twitter:card" content="summary_large_image"> <!-- Updated Twitter card type -->
+
+  <meta name="twitter:title" content="MOHANDILO">
+
+  <meta name="twitter:description" content="My name is Mohand Gamal, a Frontend Web Developer, Entrepreneur, and Designer from Egypt. I always strive for perfection in every project, pouring my tireless energy into creating websites that surpass expectations. As a professional, I pay attention to your individual needs and aspirations. What sets me apart isn't just my expertise but also the genuine passion I have for my work, adding that extra touch to make my projects stand out">
+
+  <meta name="twitter:image" content="/src/M.webp"> <!-- Updated image source -->
+    <title>MOHANDILO - Worldwide Frontend Web Developer</title>
+
+</head>
+
+<body>
+
+    <!--LOADER-->
+    <div class="loader-wrapper">
+        <svg>
+            <g>
+                <path d="M 50,100 A 1,1 0 0 1 50,0" />
+            </g>
+            <g>
+                <path d="M 50,75 A 1,1 0 0 0 50,-25" />
+            </g>
+            <defs>
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:#FF56A1;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#FF9350;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+        </svg>
+    </div>
+
+
+    <style>
+        svg {
+            overflow: visible;
+            width: 100px;
+            height: 150px;
+        }
+
+        svg g {
+            animation: slide 2s linear infinite;
+        }
+
+        svg g:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        svg g:nth-child(2) path {
+            animation-delay: 0.5s;
+            stroke-dasharray: 0px 158px;
+            stroke-dashoffset: 1px;
+        }
+
+        svg path {
+            stroke: url(#gradient);
+            stroke-width: 20px;
+            stroke-linecap: round;
+            fill: none;
+            stroke-dasharray: 0 157px;
+            stroke-dashoffset: 0;
+            animation: escalade 2s cubic-bezier(0.8, 0, 0.2, 1) infinite;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateY(-50px);
+            }
+
+            100% {
+                transform: translateY(50px);
+            }
+        }
+
+        @keyframes escalade {
+            0% {
+                stroke-dasharray: 0 157px;
+                stroke-dashoffset: 0;
+            }
+
+            50% {
+                stroke-dasharray: 157px 157px;
+                stroke-dashoffset: 0;
+            }
+
+            100% {
+                stroke-dasharray: 157px 157px;
+                stroke-dashoffset: -156px;
+            }
+        }
+    </style>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    var pageLoaded = false;
+
+    $(window).on("load", function() {
+        pageLoaded = true;
+        $(".loader-wrapper").fadeOut("slow");
+    });
+
+    $(document).ready(function() {
+        if (pageLoaded) {
+            // Page is fully loaded, so don't execute the following code
+            return;
+        }
+        
+        // Your code here
+    });
+</script>
+
+
+
+    <style>
+        .loader-wrapper {
+            z-index: 10000;
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(-45deg, #D2E0E9, #C7D9E5, #8CB2CD);
+            height: 100vh
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+
+
+
+    <div id="zoby" class="h-screen relative">
+
+        <script>
+            VANTA.CLOUDS({
+                el: "#zoby",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                skyColor: 0x2b5a7d
+            })
+        </script>
+
+        <style>
+            .heya {
+                position: absolute;
+                top: 40vh;
+            }
+        </style>
+
+        <style>
+            .container p span.typed-text {
+                font-weight: normal;
+                color: #dd7732;
+            }
+
+            .container p span.cursor {
+                display: inline-block;
+                background-color: #ccc;
+                margin-left: 0.1rem;
+                width: 3px;
+                animation: blink 1s infinite;
+            }
+
+            .container p span.cursor.typing {
+                animation: none;
+            }
+
+            @keyframes blink {
+                0% {
+                    background-color: #ccc;
+                }
+
+                49% {
+                    background-color: #ccc;
+                }
+
+                50% {
+                    background-color: transparent;
+                }
+
+                99% {
+                    background-color: transparent;
+                }
+
+                100% {
+                    background-color: #ccc;
+                }
+            }
+        </style>
+
+        <div
+            class="container1 heya left-4 md:left-16 text-4xl md:text-7xl xl:text-8xl text-white md:text-[#454547] absolute">
+            <div class="container">
+                <p>I'm <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+            </div>
+        </div>
+
+        <script>
+            const typedTextSpan = document.querySelector(".typed-text");
+            const cursorSpan = document.querySelector(".cursor");
+
+            const textArray = ["Mohand", "a Developer", "a Designer", "an Entrepreneur"];
+            const typingDelay = 200;
+            const erasingDelay = 100;
+            const newTextDelay = 400; // Delay between current and next text
+            let textArrayIndex = 0;
+            let charIndex = 0;
+
+            function type() {
+                if (charIndex < textArray[textArrayIndex].length) {
+                    if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+                    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+                    charIndex++;
+                    setTimeout(type, typingDelay);
+                }
+                else {
+                    cursorSpan.classList.remove("typing");
+                    setTimeout(erase, newTextDelay);
+                }
+            }
+
+            function erase() {
+                if (charIndex > 0) {
+                    if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+                    typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+                    charIndex--;
+                    setTimeout(erase, erasingDelay);
+                }
+                else {
+                    cursorSpan.classList.remove("typing");
+                    textArrayIndex++;
+                    if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+                    setTimeout(type, typingDelay + 1100);
+                }
+            }
+
+            document.addEventListener("DOMContentLoaded", function () { // On DOM Load initiate the effect
+                if (textArray.length) setTimeout(type, newTextDelay + 250);
+            });
+        </script>
+        <div
+            class="mt-14 md:mt-20 text-bold md:left-16 md:text-2xl text-white xl:text-4xl xl:mt-28 md:text-[#454547] left-4 text-xl absolute heya">
+            Explore world full of elegance and perfectionism
+            <div class=" bg-white rounded-lg text-black text-2xl absolute mt-3 xl:mt-6 ">
+                <form action="/index.html">
+                    <button class="px-4 py-1 text-xl xl:text-4xl font-medium">More</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="flex xl:text-2xl font-mono italic justify-center">
+            <div class="absolute bottom-4 flex">
+
+                <div class="mr-4">
+                    <form action="https://discordapp.com/users/1111811424491151411" target="_blank">
+                        <button>Discord</button>
+                    </form>
+                </div>
+
+                <div class="mr-4">
+                    <form action="https://wa.me/+201284150575" target="_blank">
+                        <button>Whatsapp</button>
+                    </form>
+                </div>
+
+                <div>
+                    <button></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>
